@@ -1,0 +1,74 @@
+<view class="cart">
+    <!-- 收货地址区域  开始 -->
+    <!-- 按钮区域  开始 -->
+    <view class="address_button" wx:if="{{!address.userName}}">
+        <button type="primary" plain bindtap="handleGetAddress">添加收货地址</button>
+    </view>
+    <!-- 按钮区域  结束 -->
+    <!-- 地址区域  开始 -->
+    <view class="address_area" wx:else>
+        <view class="personInfo">
+            <view class="person_name">收货人:{{address.userName}}</view>
+            <view class="person_address">{{address.all}}</view>
+        </view>
+        <view class="phone_number">{{address.telNumber}}</view>
+    </view>
+    <!-- 地址区域  结束 -->
+    <!-- 收货地址  结束 -->
+    <view class="cart_title">购物车</view>
+    <!-- 购物车  开始 -->
+    <view class="cart_main">
+        <view class="item" wx:for="{{cart}}" wx:key="goods_id" wx:if="{{item.num!=0}}">
+            <!-- 复选框区域  开始 -->
+            <view class="checkbox">
+                <checkbox-group bindchange="handleItemChange" data-id="{{item.goods_id}}">
+                    <checkbox checked="{{item.checked}}" class=""></checkbox>
+                </checkbox-group>
+            </view>
+            <!-- 复选框  结束 -->
+            <!-- 商品信息  开始 -->
+            <view class="goods_info_area">
+                <navigator url="/pages/goos_detail/index?goods_id={{item.goods_id}}">
+                    <!-- 图片区域 开始 -->
+                    <view class="goods_info_img">
+                        <image class="" src="{{item.goods_small_logo?item.goods_small_logo:'https://i.bmp.ovh/imgs/2021/10/a7d78e946a959b0e.jpg'}}" mode="widthFix"></image>
+                    </view>
+                    <!-- 图片区域  结束 -->
+                    <!-- 文字信息  开始 -->
+                    <view class="goods_info_content">
+                        <view class="goods_info_name">{{item.goods_name}}</view>
+                        <view class="main">
+                            <view class="goods_info_price">￥ {{item.goods_price}}</view>
+                            <view class="goods_num_group">
+                                <view class="reduce" bindtap="handleChangenum" data-operation="reduce" data-id="{{item.goods_id}}">
+                                    -
+                                </view>
+                                <view class="goods_num">{{item.num}}</view>
+                                <view class="add" bindtap="handleChangenum" data-operation="add" data-id="{{item.goods_id}}">
+                                    +
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 文字信息  结束 -->
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 购物车  结束 -->
+    <!-- 底部  开始 -->
+    <view class="bottom">
+        <checkbox-group>
+            <checkbox checked="{{isAllChecked}}">全选</checkbox>
+        </checkbox-group>
+        <view class="center">
+            <view class="sum">
+                合计:
+                <text class="sum_money">￥ {{totalPrice}}</text>
+            </view>
+            <view class="title">包含运费</view>
+        </view>
+        <view class="jion_buy_money" bindtap="handlejoin_buy">结算({{totalNum}})</view>
+    </view>
+    <!-- 底部  结束 -->
+</view>

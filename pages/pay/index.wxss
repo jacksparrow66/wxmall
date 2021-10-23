@@ -1,0 +1,111 @@
+/* pages/pay/index.wxss */
+.cart .address_area {
+  display: flex;
+  padding: 30rpx;
+}
+.cart .address_area .personInfo {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+.cart .address_area .personInfo .person_name {
+  margin-bottom: 6rpx;
+}
+.cart .address_area .phone_numer {
+  flex: 2;
+}
+.cart .cart_title {
+  color: #000;
+  border-top: solid 3rpx var(--themeColor);
+  border-bottom: solid 3rpx var(--themeColor);
+  font-size: 40rpx;
+  padding: 20rpx 30rpx;
+}
+.cart .cart_main .item {
+  display: flex;
+}
+.cart .cart_main .item checkbox-group {
+  height: 100%;
+  padding: 0 20rpx;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart .cart_main .item .goods_info_area {
+  flex: 6;
+}
+.cart .cart_main .item .goods_info_area navigator {
+  display: flex;
+}
+.cart .cart_main .item .goods_info_area navigator .goods_info_img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart .cart_main .item .goods_info_area navigator .goods_info_img image {
+  width: 70%;
+}
+.cart .cart_main .item .goods_info_area navigator .goods_info_content {
+  height: 200rpx;
+  flex: 4;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.cart .cart_main .item .goods_info_area navigator .goods_info_content .goods_info_name {
+  flex: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart .cart_main .item .goods_info_area navigator .goods_info_content .main {
+  flex: 1;
+  margin-top: 20rpx;
+  display: flex;
+}
+.cart .cart_main .item .goods_info_area navigator .goods_info_content .main .goods_info_price {
+  flex: 2;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: var(--themeColor);
+}
+.cart .cart_main .item .goods_info_area navigator .goods_info_content .main .goods_num_group .goods_num {
+  text-align: center;
+  margin-right: 40rpx;
+  margin-top: 12rpx;
+}
+.cart .bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  display: flex;
+}
+.cart .bottom .center {
+  flex: 1;
+  padding-right: 10rpx;
+}
+.cart .bottom .center .sum {
+  text-align: right;
+}
+.cart .bottom .center .sum .sum_money {
+  color: var(--themeColor);
+  font-size: 38rpx;
+}
+.cart .bottom .center .title {
+  text-align: right;
+  font-size: 26rpx;
+}
+.cart .bottom .jion_buy_money {
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: #fff;
+  background-color: var(--themeColor);
+}

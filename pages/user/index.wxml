@@ -1,0 +1,63 @@
+<view class="avatar_area_group">
+    <button wx:if="{{!userInfo.nickName}}" type="primary" plain open-type="getUserInfo" bindgetuserinfo="handlegetuserinfo">
+        登入
+    </button>
+    <view class="avatar_area">
+        <view class="avatar_background">
+            <image class="" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+        </view>
+        <view class="avatar_main">
+            <image class="" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+            <view class="avatar_name">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_like">
+        <view class="user_like_item collect_shop">
+            <view class="num">0</view>
+            <view class="user_collect_shop">收藏的店铺</view>
+        </view>
+        <navigator url="/pages/collect/index" class="user_like_item collect_goods">
+            <view class="num">{{collectNums}}</view>
+            <view class="user_collect_goods">收藏的商品</view>
+        </navigator>
+        <view class="user_like_item like_goods">
+            <view class="num">0</view>
+            <view class="user_like_goods">关注的商品</view>
+        </view>
+        <navigator url="/pages/collect/index?id=3" class="user_like_item history">
+            <view class="num">0</view>
+            <view class="user_history">我的足迹</view>
+        </navigator>
+    </view>
+    <view class="my">我的订单</view>
+    <view class="dingdan_mine">
+        <view class="dingdan_mine_item alldingdan">
+            <text class="iconfont icon-dingdan"></text>
+            <view class="title">全部订单</view>
+        </view>
+        <view class="dingdan_mine_item wait_pay">
+            <text class="iconfont icon-fukuantongzhi"></text>
+            <view class="title">待付款</view>
+        </view>
+        <view class="dingdan_mine_item wait_receipt">
+            <text class="iconfont icon-daishouhuo"></text>
+            <view class="title">待收货</view>
+        </view>
+        <view class="dingdan_mine_item Refund">
+            <text class="iconfont icon-tuikuan"></text>
+            <view class="title">退款/退货</view>
+        </view>
+    </view>
+    <view class="my address_guanli">收货地址管理</view>
+    <view class="my kefu">
+        <text class="text_left">联系客服</text>
+        <text class="text_right">400-618-40000</text>
+    </view>
+    <navigator class="" target="" url="/pages/feedback/index">
+        <view class="my">意见反馈</view>
+    </navigator>
+    <view class="my">关于我们</view>
+    <view class="my bottom">把应用推荐给其他人</view>
+</view>

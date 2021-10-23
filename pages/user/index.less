@@ -1,0 +1,102 @@
+page {
+    background-color: #edece8;
+}
+
+.avatar_area_group {
+    height: 45vh;
+    padding-top: 20rpx;
+    background-color: var(--themeColor);
+    overflow: hidden;
+
+    .avatar_area {
+        .avatar_background {
+            position: relative;
+
+            image {
+                height: 50vh;
+                filter: blur(5px);
+            }
+        }
+
+        .avatar_main {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 15%;
+            text-align: center;
+
+            image {
+                height: 150rpx;
+                width: 150rpx;
+                border-radius: 50%;
+            }
+
+            .avatar_name {
+                margin-top: 40rpx;
+                font-size: 35rpx;
+            }
+        }
+    }
+}
+
+.user_content {
+    position: absolute;
+    width: 90%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+
+    .user_like {
+        background-color: #fcfffc;
+        height: 90rpx;
+        font-size: 30rpx;
+        display: flex;
+
+        .user_like_item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .num {
+                color: var(--themeColor);
+            }
+        }
+    }
+
+    .my {
+        background-color: #fcfffc;
+        margin-top: 10rpx;
+        padding: 22rpx;
+        font-size: 29rpx;
+    }
+
+    .dingdan_mine {
+        margin-top: 8rpx;
+        background-color: #fcfffc;
+        display: flex;
+
+        .dingdan_mine_item {
+            text{
+                color: var(--themeColor);
+                font-size: 50rpx;
+            }
+            height: 100rpx;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .kefu{
+        .text_right{
+            float: right;
+        }
+    }
+    .bottom {
+        margin-top: 26rpx;
+    }
+}

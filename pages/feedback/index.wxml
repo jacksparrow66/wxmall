@@ -1,0 +1,26 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange">
+    <view class="problem">
+        <text class="problem_type">问题的种类</text>
+        <view class="button_group">
+            <buttton class="button">购买遇到问题</buttton>
+            <buttton class="button">功能建议</buttton>
+            <buttton class="button">性能问题</buttton>
+            <buttton class="button">其他</buttton>
+        </view>
+        <view class="textarea_area">
+            <textarea class="" value="" placeholder="请描述一下您的问题"></textarea>
+            <view class="buttonAddImage">
+                <button bindtap="upimageClick">+</button>
+                <view class="upimage_item" data-index="{{index}}"  bindtap="handleClick" wx:for="{{chooseImages}}" wx:key="*this">
+                    <UpImage src="{{item}}"></UpImage>
+                </view>
+            </view>
+        </view>
+        <view class="submit">
+            <button>
+                <icon class="" type="success_no_circle" size="23" color="White"></icon>
+                提交
+            </button>
+        </view>
+    </view>
+</Tabs>

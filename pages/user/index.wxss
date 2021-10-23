@@ -1,0 +1,84 @@
+page {
+  background-color: #edece8;
+}
+.avatar_area_group {
+  height: 45vh;
+  padding-top: 20rpx;
+  background-color: var(--themeColor);
+  overflow: hidden;
+}
+.avatar_area_group .avatar_area .avatar_background {
+  position: relative;
+}
+.avatar_area_group .avatar_area .avatar_background image {
+  height: 50vh;
+  filter: blur(5px);
+}
+.avatar_area_group .avatar_area .avatar_main {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 15%;
+  text-align: center;
+}
+.avatar_area_group .avatar_area .avatar_main image {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+.avatar_area_group .avatar_area .avatar_main .avatar_name {
+  margin-top: 40rpx;
+  font-size: 35rpx;
+}
+.user_content {
+  position: absolute;
+  width: 90%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.user_content .user_like {
+  background-color: #fcfffc;
+  height: 90rpx;
+  font-size: 30rpx;
+  display: flex;
+}
+.user_content .user_like .user_like_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user_content .user_like .user_like_item .num {
+  color: var(--themeColor);
+}
+.user_content .my {
+  background-color: #fcfffc;
+  margin-top: 10rpx;
+  padding: 22rpx;
+  font-size: 29rpx;
+}
+.user_content .dingdan_mine {
+  margin-top: 8rpx;
+  background-color: #fcfffc;
+  display: flex;
+}
+.user_content .dingdan_mine .dingdan_mine_item {
+  height: 100rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user_content .dingdan_mine .dingdan_mine_item text {
+  color: var(--themeColor);
+  font-size: 50rpx;
+}
+.user_content .kefu .text_right {
+  float: right;
+}
+.user_content .bottom {
+  margin-top: 26rpx;
+}

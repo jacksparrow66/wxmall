@@ -1,0 +1,24 @@
+<view class="goods_index">
+    <!-- 搜索  开始 -->
+    <SearchInput>搜索</SearchInput>
+    <!-- 搜索  结束 -->
+    <Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange">
+        <block wx:if="{{tabs[0].status}}">
+            <view class="first_tab">
+                <navigator open-type="redirect"  url="/pages/goos_detail/index?goods_id={{item.goods_id}}" wx:for="{{goods_list}}" wx:key="goods_id">
+                    <!-- 左边  图片容器 -->
+                    <view class="goods_img">
+                        <image class="" src="{{item.goods_big_logo?item.goods_big_logo:'https://s3.bmp.ovh/imgs/2021/10/fd509fd7dedb560e.jpg'}}" mode="widthFix"></image>
+                    </view>
+                    <!-- 右边  文字信息 -->
+                    <view class="goods_info">
+                        <view class="goods_info_title">
+                            {{item.goods_name}}
+                        </view>
+                        <view class="goods_info_price">{{item.goods_price}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </Tabs>
+</view>

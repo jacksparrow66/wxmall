@@ -1,0 +1,16 @@
+<view class="search">
+    <view class="search_input">
+        <input value="{{InputValue}}" type="text" bindinput="handleInputChange" placeholder="请输入搜索内容" />
+        <button bindtap="handlebtn" class="stop" hidden="{{isShow}}">
+            取消
+        </button>
+    </view>
+    <view class="result">
+        搜索结果:
+    </view>
+    <view class="search_goods">
+        <navigator open-type="redirect" url="/pages/goos_detail/index?goods_id={{item.goods_id}}" wx:for="{{searchGoods}}" wx:key="goods_id">
+            <view class="goods_info_title">{{item.goods_name}}</view>
+        </navigator>
+    </view>
+</view>

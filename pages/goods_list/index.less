@@ -1,0 +1,43 @@
+.active {
+    color: var(--themeColor);
+    border-bottom: solid 6rpx var(--themeColor);
+}
+
+.view {
+    margin-top: 10rpx;
+}
+
+.first_tab {
+
+    navigator {
+        display: flex;
+
+        .goods_img {
+            flex: 2;
+            text-align: center;
+
+            image {
+                width: 70%;
+            }
+        }
+
+        .goods_info {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .goods_info_title {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+
+            .goods_info_price {
+                color: var(--themeColor);
+            }
+        }
+    }
+
+}

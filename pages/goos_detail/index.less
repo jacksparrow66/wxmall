@@ -1,0 +1,123 @@
+.detail_swiper {
+    swiper {
+        height: 65vw;
+        text-align: center;
+
+        swiper-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            image {
+                width: 60%;
+            }
+        }
+    }
+}
+
+.details_price {
+    padding: 6rpx 20rpx;
+    color: var(--themeColor);
+    font-weight: 600;
+}
+
+.details_title {
+    display: flex;
+    padding: 10rpx 0;
+    border-top: #ccc 5rpx solid;
+    border-bottom: #ccc 5rpx solid;
+    .details_title_name {
+        flex: 5;
+        padding: 0 10rpx;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        padding-left: 20rpx;
+    }
+
+    .details_title_img {
+        border-left: 5rpx solid #000;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .shoucang {
+            font-size: 28rpx;
+        }
+        .icon-shoucang{
+            color: orangered;
+        }
+    }
+}
+
+.details_info {
+    .details_info_title {
+        font-size: 32rpx;
+        font-weight: 600;
+        padding: 10rpx 0;
+        color: var(--themeColor);
+        padding: 20rpx;
+    }
+}
+
+.details_navbar {
+    height: 90rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+
+    .details_navbar_item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        navigator {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            button {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+    }
+
+    .item_joinbuy_cat_text {
+        flex: 2;
+        color: #fff;
+        font-size: 30rpx;
+        background-color: #ffa300;
+        font-weight: 600;
+    }
+
+    .item_joinbuy {
+        flex: 2;
+        color: #fff;
+        font-size: 30rpx;
+        background-color: var(--themeColor);
+        font-weight: 600;
+    }
+}

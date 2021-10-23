@@ -1,0 +1,6 @@
+<view class="upimage_warp">
+  <image class="" src="{{src}}">
+  </image>
+  <icon class="" type="clear" size="23" color="red">
+  </icon>
+</view>

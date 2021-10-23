@@ -1,0 +1,4 @@
+
+    <Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange">
+        
+    </Tabs>

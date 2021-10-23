@@ -1,0 +1,56 @@
+.lookFootPrint,.collect_main {
+
+    // 按钮区域
+    .button_group {
+        margin-top: 20rpx;
+        margin-left: 20rpx;
+
+        .collect_tips {
+            border: solid black 2rpx;
+            padding: 10rpx 20rpx;
+            font-size: 30rpx;
+            margin-left: 10rpx;
+        }
+
+        .active {
+            color: var(--themeColor);
+            border: 2rpx solid var(--themeColor);
+        }
+    }
+
+    // 商品区域
+    .goods_list {
+        margin-top: 40rpx;
+
+        navigator {
+            display: flex;
+
+            .goods_img {
+                flex: 2;
+                text-align: center;
+
+                image {
+                    width: 70%;
+                }
+            }
+
+            .goods_info {
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .goods_info_title {
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
+
+                .goods_info_price {
+                    color: var(--themeColor);
+                }
+            }
+        }
+    }
+}

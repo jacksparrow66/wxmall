@@ -1,0 +1,52 @@
+.lookFootPrint .button_group,
+.collect_main .button_group {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.lookFootPrint .button_group .collect_tips,
+.collect_main .button_group .collect_tips {
+  border: solid black 2rpx;
+  padding: 10rpx 20rpx;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.lookFootPrint .button_group .active,
+.collect_main .button_group .active {
+  color: var(--themeColor);
+  border: 2rpx solid var(--themeColor);
+}
+.lookFootPrint .goods_list,
+.collect_main .goods_list {
+  margin-top: 40rpx;
+}
+.lookFootPrint .goods_list navigator,
+.collect_main .goods_list navigator {
+  display: flex;
+}
+.lookFootPrint .goods_list navigator .goods_img,
+.collect_main .goods_list navigator .goods_img {
+  flex: 2;
+  text-align: center;
+}
+.lookFootPrint .goods_list navigator .goods_img image,
+.collect_main .goods_list navigator .goods_img image {
+  width: 70%;
+}
+.lookFootPrint .goods_list navigator .goods_info,
+.collect_main .goods_list navigator .goods_info {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.lookFootPrint .goods_list navigator .goods_info .goods_info_title,
+.collect_main .goods_list navigator .goods_info .goods_info_title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.lookFootPrint .goods_list navigator .goods_info .goods_info_price,
+.collect_main .goods_list navigator .goods_info .goods_info_price {
+  color: var(--themeColor);
+}

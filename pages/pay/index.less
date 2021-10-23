@@ -1,0 +1,151 @@
+/* pages/pay/index.wxss */.cart {
+
+    // 收货地址区域
+    .address_area {
+        display: flex;
+        padding: 30rpx;
+
+        // 用户信息区域
+        .personInfo {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+
+            // 用户名字区域
+            .person_name {
+                margin-bottom: 6rpx;
+            }
+        }
+
+        // 用户电话区域
+        .phone_numer {
+            flex: 2;
+        }
+    }
+
+    // 购物车字体区域
+    .cart_title {
+        color: #000;
+        border-top: solid 3rpx var(--themeColor);
+        border-bottom: solid 3rpx var(--themeColor);
+        font-size: 40rpx;
+        padding: 20rpx 30rpx;
+    }
+
+    // 购物车区域
+    .cart_main {
+        .item {
+            display: flex;
+
+            checkbox-group {
+                height: 100%;
+                padding: 0 20rpx;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            // 商品信息区域
+            .goods_info_area {
+                flex: 6;
+
+                navigator {
+                    display: flex;
+
+                    // 图片区域
+                    .goods_info_img {
+                        flex: 2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        image{
+                            width: 70%;
+                        }
+                    }
+
+                    // 文字内容区域
+                    .goods_info_content {
+                        height: 200rpx;
+                        flex: 4;
+                        padding: 20rpx;
+                        display: flex;
+                        flex-direction: column;
+
+                        // 商品名字区域
+                        .goods_info_name {
+                            flex: 1;
+                            display: -webkit-box;
+                            overflow: hidden;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                        }
+
+                        // 价格数量区域
+                        .main {
+                            flex: 1;
+                            margin-top: 20rpx;
+                            display: flex;
+
+                            // 价格区域
+                            .goods_info_price {
+                                flex: 2;
+                                font-size: 36rpx;
+                                font-weight: 600;
+                                color: var(--themeColor);
+                            }
+
+                            // 数量
+                            .goods_num_group {
+                                .goods_num {
+                                    text-align: center;
+                                    margin-right: 40rpx;
+                                    margin-top: 12rpx;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 底部区域
+    .bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 90rpx;
+        display: flex;
+
+        .center {
+            flex: 1;
+            padding-right: 10rpx;
+
+            .sum {
+                text-align: right;
+
+                .sum_money {
+                    color: var(--themeColor);
+                    font-size: 38rpx;
+                }
+            }
+
+            .title {
+                text-align: right;
+                font-size: 26rpx;
+            }
+        }
+
+        .jion_buy_money {
+            width: 200rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36rpx;
+            color: #fff;
+            background-color: var(--themeColor);
+        }
+    }
+}

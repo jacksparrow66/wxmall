@@ -1,0 +1,50 @@
+<!-- 轮播  开始 -->
+<view class="detail_swiper">
+    <swiper indicator-dots autoplay interval="3000" circular>
+        <swiper-item wx:for="{{goodsObj.pics.length==0?swiperdata:goodsObj.pics}}" data-swiper="{{item}}" wx:key="pics_id" data-url="{{item.pics_mid}}" bindtap="handleSwiperClick">
+            <image class="" src="{{item.pics_mid||item}}" mode="widthFix"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<!-- 轮播  结束 -->
+<!-- 详情  开始 -->
+<view class="details_price">$  {{goodsObj.goods_price}}</view>
+<view class="details_title">
+    <view class="details_title_name">{{goodsObj.goods_name}}</view>
+    <view class="details_title_img" bindtap="handleshoucang">
+        <text class="iconfont {{isCollect?'icon-shoucang':'icon-shoucang1'}} "></text>
+        <view class="shoucang">收藏</view>
+    </view>
+</view>
+<view class="details_info">
+    <view class="details_info_title">图文详情</view>
+    <view class="details_info_conent">
+        <rich-text class="" nodes="{{goodsObj.goods_introduce}}"></rich-text>
+    </view>
+</view>
+<!-- 详情  结束 -->
+<!-- 底部  导航栏 -->
+<view class="details_navbar">
+    <view class="details_navbar_item kefu">
+        <text class="iconfont icon-kefu"></text>
+        <view class="talkkefu">
+            联系客服
+            <button open-type="contact"></button>
+        </view>
+    </view>
+    <view class="details_navbar_item item_share">
+        <text class="iconfont icon-fenxiang"></text>
+        <view class="share">
+            分享
+            <button open-type="share"></button>
+        </view>
+    </view>
+    <view class="details_navbar_item item_buycat">
+        <navigator url="/pages/cart/index" open-type="switchTab">
+            <text class="iconfont icon-gouwuche"></text>
+            <view class="buycat">购物车</view>
+        </navigator>
+    </view>
+    <view class="details_navbar_item item_joinbuy_cat_text" bindtap="handleJoinCartClick">加入购物车</view>
+    <view class="details_navbar_item item_joinbuy">立即购买</view>
+</view>
